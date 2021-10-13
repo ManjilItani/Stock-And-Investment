@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+ <div class ="box 1">
+    <table class="table table-bordered">
+     <thead>
+       <td>Current User</td>
+       <td>Buying power</td>
+     </thead>
+     <tbody>
+       <tr>
+         <td>{{name}}</td>
+         <td>{{balance | usd}}</td>
+       </tr>
+     </tbody>
+    </table>
+  </div>
+  <div class="box 2">
+      <table class="table table-dark">
+     <thead>
+       <td>Stocks</td>
+       <td>Counts</td>
+       <td>Current price</td>
+       <td>Total</td>
+     </thead>
+     <tbody>
+      {% for details in profile %}
+       <tr>
+         <td>{{ details["stock"] }}</td>
+         <td>{{ details["quantity"] }}</td>
+         <td>{{ details["current_price"] | usd}}</td>
+         <td>{{ details["total"] | usd}}</td>
+       </tr>
+       {% endfor %}
+       <tr>
+        <td></td>
+        <td></td>
+        <td>Account value :</td>
+        <td>$ {{grand_total}}</td>
+       </tr>
+     </tbody>
+    </table>
+  </div>
+
+{% endblock %}

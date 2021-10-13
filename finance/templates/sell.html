@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Portal
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="form-group">
+            <label>Stocks available to sell:</label>
+            <select  name="symbol">
+                <option value = "" disabled selected></option>
+                {% for symbol in symbols %}
+                <option value="{{ symbol }}">{{symbol}}</option>
+                {% endfor %}
+            </select>
+            <input class="form-control" name="shares" autocomplete="off" placeholder="Number of shares" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+    
+{% endblock %}

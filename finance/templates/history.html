@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+ <div class ="box 1">
+    <table class="table table-bordered">
+     <thead>
+      <td>Symbol</td>
+      <td>Price</td>
+      <td>Quantity</td>
+      <td>Total Cost</td>
+      <td>Transaction Type</td>
+      <td>Date and Time</td>
+     </thead>
+     <tbody>
+      {% for transaction in transactions %}
+      <tr>
+       <td>{{ transaction["stock_name"] }}</td>
+       <td>{{ transaction["price"] }}</td>
+       <td>{{ transaction["quantity"] }}</td>
+       <td>{{ transaction["total_price"] }}</td>
+       <td>{{ transaction["type"] }}</td>
+       <td>{{ transaction["date"] }}</td>
+      </tr>
+      {% endfor %}
+     </tbody>
+    </table>
+  </div>
+
+{% endblock %}
