@@ -9,3 +9,7 @@ Well maintained (in SQLite) and displayed information about users balance, buyin
  `export API_KEY={YOUR_IEX_API_KEY} `
  * Then from home directory:
  `flask run `
+
+
+## Login page preview:
+ ![Login Page]("./stock_register.PNG")
