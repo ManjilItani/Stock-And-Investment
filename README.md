@@ -12,4 +12,7 @@ Well maintained (in SQLite) and displayed information about users balance, buyin
 
 
 ## Login page preview:
- ![Login Page]("./stock_register.PNG")
+ ![Login Page](./stock_register.PNG)
+ 
+ ## Home screen preview:
+ ![Home Page](./stock_home.PNG)
